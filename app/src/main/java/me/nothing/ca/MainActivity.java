@@ -69,181 +69,61 @@ public class MainActivity extends AppCompatActivity {
         mimg1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(selected.contains(getUrl(1))){
-                    selected.remove(getUrl(1));
-                    mimg1.setAlpha((float) 1);
-                }else {
-                    if(selected.size() < 6){
-                        mimg1.setAlpha((float) 0.5);
-                        selectPhoto(1);
-                    }else{
-                        Toast.makeText(MainActivity.this,
-                                "already choose 6 photos",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
+                final_(1,mimg1);
             }
         });
         mimg2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(selected.contains(getUrl(2))){
-                    selected.remove(getUrl(2));
-                    mimg2.setAlpha((float) 1);
-                }else{
-                    if(selected.size() < 6){
-                        mimg2.setAlpha((float) 0.5);
-                        selectPhoto(2);
-                    }else {
-                        Toast.makeText(MainActivity.this,
-                                "already choose 6 photos",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
+                final_(2,mimg2);
             }
         });
         mimg3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(selected.contains(getUrl(3))){
-                    selected.remove(getUrl(3));
-                    mimg3.setAlpha((float) 1);
-                }else{
-                    if(selected.size() < 6){
-                        mimg3.setAlpha((float) 0.5);
-                        selectPhoto(3);
-                    }else{
-                        Toast.makeText(MainActivity.this,
-                                "already choose 6 photos",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
+                final_(3,mimg3);
             }
         });
         mimg4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(selected.contains(getUrl(4))){
-                    selected.remove(getUrl(4));
-                    mimg4.setAlpha((float) 1);
-                }else{
-                    if(selected.size() < 6){
-                        mimg4.setAlpha((float) 0.5);
-                        selectPhoto(4);
-                    }else{
-                        Toast.makeText(MainActivity.this,
-                                "already choose 6 photos",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
+                final_(4,mimg4);
             }
         });
         mimg5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(selected.contains(getUrl(5))){
-                    selected.remove(getUrl(5));
-                    mimg5.setAlpha((float) 1);
-                }else{
-                    if(selected.size() < 6){
-                        mimg5.setAlpha((float) 0.5);
-                        selectPhoto(5);
-                    }else{
-                        Toast.makeText(MainActivity.this,
-                                "already choose 6 photos",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
+                final_(5,mimg5);
             }
         });
         mimg6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(selected.contains(getUrl(6))){
-                    selected.remove(getUrl(6));
-                    mimg6.setAlpha((float) 1);
-                }else{
-                    if(selected.size() < 6){
-                        mimg6.setAlpha((float) 0.5);
-                        selectPhoto(6);
-                    }else{
-                        Toast.makeText(MainActivity.this,
-                                "already choose 6 photos",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
+                final_(6,mimg6);
             }
         });
         mimg7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(selected.contains(getUrl(7))){
-                    selected.remove(getUrl(7));
-                    mimg7.setAlpha((float) 1);
-                }else{
-                    if(selected.size() < 6){
-                        mimg7.setAlpha((float) 0.5);
-                        selectPhoto(7);
-                    }else{
-                        Toast.makeText(MainActivity.this,
-                                "already choose 6 photos",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
+                final_(7,mimg7);
             }
         });
         mimg8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(selected.contains(getUrl(8))){
-                    selected.remove(getUrl(8));
-                    mimg8.setAlpha((float) 1);
-                }else{
-                    if(selected.size() < 6){
-                        mimg8.setAlpha((float) 0.5);
-                        selectPhoto(8);
-                    }else{
-                        Toast.makeText(MainActivity.this,
-                                "already choose 6 photos",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
-                }
+                final_(8,mimg8);
+            }
         });
         mimg9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(selected.contains(getUrl(9))){
-                    selected.remove(getUrl(9));
-                    mimg9.setAlpha((float) 1);
-                }else{
-                    if(selected.size() < 6){
-                        mimg9.setAlpha((float) 0.5);
-                        selectPhoto(9);
-                    }else{
-                        Toast.makeText(MainActivity.this,
-                                "already choose 6 photos",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
-                }
+                final_(9,mimg9);
+            }
         });
         mimg10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(selected.contains(getUrl(10))){
-                    selected.remove(getUrl(10));
-                    mimg10.setAlpha((float) 1);
-                }else{
-                    if(selected.size() < 6){
-                        mimg10.setAlpha((float) 0.5);
-                        selectPhoto(10);
-                    }else{
-                        Toast.makeText(MainActivity.this,
-                                "already choose 6 photos",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
+                final_(10,mimg10);
             }
         });
 
@@ -271,6 +151,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void final_(int i, ImageView img){
+        if(selected.contains(getUrl(i))){
+            selected.remove(getUrl(i));
+            img.setAlpha((float) 1);
+        }else {
+            if(selected.size() < 6){
+                img.setAlpha((float) 0.5);
+                selectPhoto(i);
+            }else{
+                Toast.makeText(MainActivity.this,
+                        "already choose 6 photos",
+                        Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
 
     public void selectPhoto(int i){
         if(selected.size() < 6) {
