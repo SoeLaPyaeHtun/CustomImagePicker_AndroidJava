@@ -186,6 +186,17 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("selected",mySelect);
         startActivity(intent);
     }
+
+    public void setDelay(File file,ImageView imgView, int loopValue){
+        imgView.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                myMap.put(loopValue,file.toString());
+                Bitmap imgBitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
+                imgView.setImageBitmap(imgBitmap);
+            }
+        },loopValue * 300);
+    }
     public void loadPhoto() {
             File dir = mTargetFile;
             boolean isit = dir.isDirectory();
@@ -197,37 +208,26 @@ public class MainActivity extends AppCompatActivity {
                     File imgFile = new File("/data/user/0/me.nothing.ca/files/photos/" + i + ".jpg");
 
                     if (imgFile.exists()) {
-                        Bitmap imgBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
                         if(i == 1) {
-                            myMap.put(i,imgFile.toString());
-                            mimg1.setImageBitmap(imgBitmap);
+                            setDelay(imgFile,mimg1,i);
                         }else if(i == 2){
-                            myMap.put(i,imgFile.toString());
-                            mimg2.setImageBitmap(imgBitmap);
+                            setDelay(imgFile,mimg2,i);
                         }else if(i == 3){
-                            myMap.put(i,imgFile.toString());
-                            mimg3.setImageBitmap(imgBitmap);
+                            setDelay(imgFile,mimg3,i);
                         }else if(i == 4){
-                            myMap.put(i,imgFile.toString());
-                            mimg4.setImageBitmap(imgBitmap);
+                            setDelay(imgFile,mimg4,i);
                         }else if(i == 5){
-                            myMap.put(i,imgFile.toString());
-                            mimg5.setImageBitmap(imgBitmap);
+                            setDelay(imgFile,mimg5,i);
                         }else if(i == 6){
-                            myMap.put(i,imgFile.toString());
-                            mimg6.setImageBitmap(imgBitmap);
+                            setDelay(imgFile,mimg6,i);
                         }else if(i == 7){
-                            myMap.put(i,imgFile.toString());
-                            mimg7.setImageBitmap(imgBitmap);
+                            setDelay(imgFile,mimg7,i);
                         }else if(i == 8){
-                            myMap.put(i,imgFile.toString());
-                            mimg8.setImageBitmap(imgBitmap);
+                            setDelay(imgFile,mimg8,i);
                         }else if(i == 9){
-                            myMap.put(i,imgFile.toString());
-                            mimg9.setImageBitmap(imgBitmap);
+                            setDelay(imgFile,mimg9,i);
                         }else if(i == 10){
-                            myMap.put(i,imgFile.toString());
-                            mimg10.setImageBitmap(imgBitmap);
+                            setDelay(imgFile,mimg10,i);
                         }
 
                     }
